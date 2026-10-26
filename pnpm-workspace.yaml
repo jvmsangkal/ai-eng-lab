@@ -1,0 +1,31 @@
+allowBuilds:
+  "@google/genai": true
+  "@openrouter/sdk": true
+  esbuild: true
+  lightningcss: true
+  protobufjs: true
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@1.1.0
+  vite-plus: 1.1.0
+overrides:
+  vite@*: "catalog:"
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: "*"
+permissions:
+  "@tanstack/ai":
+    skills: true
+  "@tanstack/devtools-event-client":
+    skills: true
+  "@tanstack/devtools-vite":
+    skills: true
+  "@tanstack/react-router":
+    skills: true
+  "@tanstack/react-start":
+    skills: true
+skills:
+  dirs:
+    - .claude/skills
+    - .agents/skills
